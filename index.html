@@ -5,6 +5,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- formrun -->
+    <script src="https://sdk.form.run/js/v2/embed.js"></script>
+    <div
+      class="formrun-embed"
+      data-formrun-form="@scnmks--1609631427"
+      data-formrun-redirect="true">
+    </div>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -135,7 +143,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered  modal-dialog-fluid" role="document">
-    <div class="modal-content" style="width:740px; margin-left: -120px;">
+    <div class="modal-content" style="width:740px; margin-left: -60px;">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenterTitle">site1</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -154,7 +162,7 @@
  
 <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered  modal-dialog-fluid" role="document">
-    <div class="modal-content" style="width:1140px; margin-left:-200px;">
+    <div class="modal-content" style="width:1140px; margin-left:-80px;">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenterTitle">site2</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -190,40 +198,48 @@
   </div>
 </div>
 
-<section id="cover" >
-  <div id="cover-caption">
-      <div class="container">
-          <div class="row text-info">
-              <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
-                  <h1 class="display-10 py-5 text-truncate">お問い合わせはこちら</h1>
-                  <div class="px-2">
-                      <form action="" class="justify-content-center">
-                          <div class="form-group">
-                              <label class="sr-only">お名前</label>
-                              <input type="text" class="form-control" placeholder="お名前">
-                          </div>
-                          <div class="form-group">
-                              <label class="sr-only">メールアドレス</label>
-                              <input type="text" class="form-control" placeholder="メールアドレス">
-                          </div>
-                          <button type="submit" class="btn btn-info btn-lg">送信</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
+
+<section class="form">
+  <h2>お問い合わせフォーム</h2>
+
+  <div class="contact-form">
+
+      <!-- class, action, methodを変更しないでください -->
+    <form class="formrun" action="https://form.run/api/v1/r/lb1ogp4k8i3ukdllll7vuuqo" method="post">
+      <!-- ↓自由に要素を追加・編集することができます -->
+
+      <!-- 入力フォームのラップ -->
+      <div class="contact-wrap">
+        <p><span>| </span>Name</p>
+          <input name="お名前" id="name" class="form" type="name" value="" placeholder="*必ずご入力ください">
+        <p><span>| </span>E-mail</p>
+          <input name="メールアドレス" id="email" class="form" type="email" value="" placeholder="*必ずご入力ください" data-formrun-type="email" data-formrun-required>
+        <p><span>| </span>お問い合わせ</p>
+          <textarea name="お問い合わせ内容" id="contact" class="form" cols="30" rows="5" value="" placeholder="お問い合わせ内容をご記入下さい"  data-formrun-required></textarea>
       </div>
+
+      <!-- 送信ボタンのラップ -->
+      <div class="contact-submit">
+        <button id="submit" type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">入力内容を送信</button>
+        <input id="reset" type="reset" value="リセット">
+      </div>
+
+      <!-- ボット投稿をブロックするためのタグ -->
+      <div class="_formrun_gotcha">
+        <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+        <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+        <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+      </div>
+    </form>
+
   </div>
-  <script src="https://sdk.form.run/js/v2/embed.js"></script>
-<div
-  class="formrun-embed"
-  data-formrun-form="@scnmks--1609631427"
-  data-formrun-redirect="true">
-</div>
+</section>
 
 
 
   </div><!-- /container -->
 </div><!-- /page -->
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -237,10 +253,9 @@
  <div class="footer_comment" >
     <p>©2020　Kaoli's Portfolio</p>
   <div class="sns"> 
-    <i class="fab fa-twitter"><a href="https://twitter.com/kaori13206899"> twitter</a></i>
-    <i class="fab fa-instagram"><a href="https://twitter.com/kaori13206899"> instagram</a></i>
-    <i class="far fa-comments"><a href="https://www.chatwork.com/souchinatu"> chatwork</a></i>
-  </div>
+     <i class="fab fa-twitter"><a href="https://twitter.com/kaori13206899"> twitter</a></i>
+     <i class="fab fa-instagram"><a href="https://twitter.com/kaori13206899"> instagram</a></i>
+   </div>
 </div>
 
   
